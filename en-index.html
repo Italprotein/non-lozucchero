@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EPKE2X45SR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EPKE2X45SR');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Non è lo Zucchero® — The Protein Alternative to Sugar</title>
+<meta name="description" content="Non è lo Zucchero® is the protein-based sugar alternative by Italprotein Srl. Zero sugars, zero empty calories. Sachets for cafés, bulk for pastry shops, and jars for home use.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,600&family=Lato:wght@300;400;700&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Lato',sans-serif;background:#fff;color:#1a1a1a;overflow-x:hidden}
+:root{
+  --rosso:#C8102E;--rosso-scuro:#8B0A1E;--rosso-chiaro:#E8192C;
+  --crema:#FAF7F2;--crema2:#F5EFE6;--grigio:#4a4a4a;
+  --grigio-chiaro:#f0ece6;--oro:#b8973a;--bianco:#ffffff;
+}
+
+/* HEARTBEAT */
+@keyframes heartbeat{
+  0%,100%{transform:scale(1)}
+  14%{transform:scale(1.35)}
+  28%{transform:scale(1)}
+  42%{transform:scale(1.25)}
+  70%{transform:scale(1)}
+}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+
+.divider-ornament{display:flex;align-items:center;gap:16px;justify-content:center;margin:20px 0}
+.divider-ornament::before,.divider-ornament::after{content:'';flex:1;max-width:80px;height:1px;background:var(--rosso);opacity:.4}
+
+/* LANGUAGE SWITCHER */
+.lang-switch{display:flex;align-items:center;gap:4px;margin-left:16px}
+.lang-switch a{display:flex;align-items:center;justify-content:center;width:32px;height:22px;border-radius:3px;font-size:11px;font-weight:700;letter-spacing:.04em;text-decoration:none;text-transform:uppercase;transition:all .2s;border:1.5px solid transparent}
+.lang-switch a.active{background:var(--rosso);color:#fff;border-color:var(--rosso)}
+.lang-switch a:not(.active){color:var(--grigio);border-color:rgba(0,0,0,.15)}
+.lang-switch a:not(.active):hover{border-color:var(--rosso);color:var(--rosso)}
+
+/* NAVBAR */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(200,16,46,.12);transition:box-shadow .3s}
+.navbar.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.08)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:76px}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-logo img{height:60px;width:auto;object-fit:contain}
+.nav-links{display:flex;gap:32px;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;font-size:13px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--grigio);transition:color .2s}
+.nav-links a:hover{color:var(--rosso)}
+.nav-cta{background:var(--rosso);color:#fff!important;padding:10px 22px;border-radius:2px;letter-spacing:.1em;font-weight:700;transition:background .2s!important}
+.nav-cta:hover{background:var(--rosso-scuro)!important}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border:none;background:transparent}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--rosso);transition:all .3s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-mobile{display:none;position:fixed;top:76px;left:0;right:0;background:#fff;border-bottom:1px solid rgba(200,16,46,.12);z-index:999;padding:24px 32px 32px;flex-direction:column}
+.nav-mobile.open{display:flex}
+.nav-mobile a{display:block;padding:14px 0;border-bottom:1px solid var(--grigio-chiaro);font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--grigio);text-decoration:none}
+.nav-mobile a:last-child{border-bottom:none;margin-top:16px;background:var(--rosso);color:#fff;text-align:center;padding:14px;border-radius:2px}
+.nav-mobile .lang-switch-mobile{display:flex;gap:8px;padding:14px 0;border-bottom:1px solid var(--grigio-chiaro)}
+.nav-mobile .lang-switch-mobile a{display:inline-flex;align-items:center;justify-content:center;padding:8px 16px;border:1.5px solid rgba(0,0,0,.15);border-radius:3px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.nav-mobile .lang-switch-mobile a.active{background:var(--rosso);color:#fff;border-color:var(--rosso)}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;padding-top:76px}
+.hero-left{background:var(--crema);display:flex;flex-direction:column;justify-content:center;padding:80px 64px 80px 80px;position:relative}
+.hero-left::after{content:'';position:absolute;right:-1px;top:0;bottom:0;width:1px;background:rgba(200,16,46,.15)}
+.hero-eyebrow{font-size:11px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--rosso);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.hero-eyebrow::before{content:'';display:inline-block;width:30px;height:1px;background:var(--rosso)}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(42px,5vw,68px);font-weight:900;line-height:1.05;color:#1a1a1a;margin-bottom:12px}
+.hero-title .cursive{font-style:italic;color:var(--rosso)}
+.hero-subtitle{font-family:'Dancing Script',cursive;font-size:clamp(22px,2.5vw,32px);color:var(--rosso);margin-bottom:28px;line-height:1.3}
+.hero-desc{font-size:15px;font-weight:300;line-height:1.9;color:var(--grigio);max-width:460px;margin-bottom:40px}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--rosso);color:#fff;text-decoration:none;padding:14px 32px;font-family:'Lato',sans-serif;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;border-radius:2px;transition:all .25s;border:2px solid var(--rosso)}
+.btn-primary:hover{background:var(--rosso-scuro);border-color:var(--rosso-scuro);transform:translateY(-1px);box-shadow:0 6px 20px rgba(200,16,46,.25)}
+.btn-secondary{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--rosso);text-decoration:none;padding:14px 32px;font-family:'Lato',sans-serif;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;border-radius:2px;transition:all .25s;border:2px solid var(--rosso)}
+.btn-secondary:hover{background:var(--rosso);color:#fff;transform:translateY(-1px)}
+.hero-right{background:#1a1a1a;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.hero-right::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%,rgba(200,16,46,.18) 0%,transparent 65%)}
+.hero-img-wrap{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;width:100%;height:100%}
+.hero-img-wrap img{max-width:72%;max-height:72vh;object-fit:contain;filter:drop-shadow(0 30px 60px rgba(0,0,0,.55));animation:float 6s ease-in-out infinite}
+.hero-badge{position:absolute;bottom:40px;right:40px;width:100px;height:100px;border-radius:50%;background:var(--rosso);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-family:'Playfair Display',serif;text-align:center;z-index:3;box-shadow:0 8px 30px rgba(200,16,46,.4)}
+.hero-badge span:first-child{font-size:26px;font-weight:900;line-height:1}
+.hero-badge span:last-child{font-size:9px;font-weight:400;letter-spacing:.15em;text-transform:uppercase;margin-top:2px}
+.hero-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.4);font-size:9px;letter-spacing:.2em;text-transform:uppercase;z-index:3;animation:bounce 2s ease-in-out infinite}
+.hero-scroll::after{content:'';display:block;width:1px;height:28px;background:rgba(255,255,255,.25)}
+
+/* TRUST BAR */
+.trust-bar{background:var(--rosso);padding:18px 0}
+.trust-inner{max-width:1200px;margin:0 auto;padding:0 32px;display:flex;justify-content:center;gap:clamp(24px,4vw,64px);flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:10px;color:#fff}
+.trust-item svg{opacity:.85;flex-shrink:0}
+.trust-item span{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+
+/* SECTIONS */
+section{position:relative}
+.section-inner{max-width:1200px;margin:0 auto;padding:100px 32px}
+.section-label{font-size:10px;font-weight:700;letter-spacing:.35em;text-transform:uppercase;color:var(--rosso);margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.section-label::before{content:'';display:inline-block;width:28px;height:1px;background:var(--rosso)}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,48px);font-weight:800;line-height:1.15;color:#1a1a1a;margin-bottom:16px}
+.section-title em{font-style:italic;color:var(--rosso)}
+.section-lead{font-size:16px;font-weight:300;line-height:1.8;color:var(--grigio);max-width:560px}
+.features-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin-bottom:40px}
+.features-list li{display:flex;align-items:flex-start;gap:14px;font-size:14px;font-weight:300;line-height:1.7;color:var(--grigio)}
+.features-list li::before{content:'✦';color:var(--rosso);flex-shrink:0;margin-top:3px;font-size:10px}
+
+/* PRODOTTO */
+.prodotto{background:var(--crema)}
+.prodotto-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.bustina-duo{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+.bustina-card{background:#fff;border-radius:4px;padding:20px 16px;display:flex;flex-direction:column;align-items:center;box-shadow:0 4px 24px rgba(0,0,0,.06);transition:transform .3s}
+.bustina-card:hover{transform:translateY(-4px)}
+.bustina-card img{max-width:100%;max-height:180px;object-fit:contain}
+.bustina-label{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--rosso);margin-top:10px;text-align:center}
+.prodotto-img-card{background:#fff;border-radius:4px;padding:32px 24px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(0,0,0,.06);transition:transform .3s,box-shadow .3s}
+.prodotto-img-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.1)}
+.prodotto-img-card img{max-width:100%;max-height:220px;object-fit:contain}
+
+/* CAFFE */
+.caffe-section{background:#fff}
+.caffe-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.caffe-img{position:relative;border-radius:4px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.12)}
+.caffe-img img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .6s}
+.caffe-img:hover img{transform:scale(1.03)}
+.caffe-img .img-caption{position:absolute;bottom:0;left:0;right:0;padding:20px 24px;background:linear-gradient(transparent,rgba(0,0,0,.75));color:#fff}
+.caffe-img .img-caption strong{display:block;font-family:'Playfair Display',serif;font-size:15px;font-style:italic;margin-bottom:4px}
+.caffe-img .img-caption span{font-size:11px;opacity:.8;letter-spacing:.05em}
+
+/* CAPPUCCINO */
+.cappuccino-section{background:var(--crema)}
+.cappuccino-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.cappuccino-visual{position:relative;padding-bottom:24px}
+.cappuccino-img{border-radius:4px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.12)}
+.cappuccino-img img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.cappuccino-callout{position:absolute;bottom:-8px;right:-16px;background:var(--rosso);color:#fff;padding:20px 24px;border-radius:4px;max-width:220px;box-shadow:0 10px 30px rgba(200,16,46,.3)}
+.cappuccino-callout .callout-title{font-family:'Playfair Display',serif;font-size:13px;font-style:italic;margin-bottom:6px;opacity:.9}
+.cappuccino-callout .callout-body{font-size:11px;font-weight:300;line-height:1.6;opacity:.85}
+.schiuma-note{background:#fff;border-left:3px solid var(--rosso);padding:20px 24px;border-radius:0 4px 4px 0;margin-top:32px;box-shadow:0 2px 12px rgba(0,0,0,.05)}
+.schiuma-note .note-label{font-size:9px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--rosso);margin-bottom:8px}
+.schiuma-note p{font-size:14px;font-weight:300;line-height:1.8;color:var(--grigio)}
+.schiuma-note em{font-style:italic;color:var(--rosso-scuro);font-weight:400}
+
+/* DISPENSER */
+.dispenser-section{background:#1a1a1a;overflow:hidden}
+.dispenser-inner{max-width:1200px;margin:0 auto;padding:100px 32px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.dispenser-content .section-label{color:rgba(200,16,46,.9)}
+.dispenser-content .section-label::before{background:rgba(200,16,46,.9)}
+.dispenser-content .section-title{color:#fff}
+.dispenser-content .section-title em{color:var(--rosso-chiaro)}
+.dispenser-content .section-lead{color:rgba(255,255,255,.6);max-width:480px;margin-bottom:40px}
+.dispenser-features{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:40px}
+.disp-feature{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:4px;padding:20px}
+.disp-feature-icon{font-size:22px;margin-bottom:10px}
+.disp-feature-title{font-family:'Playfair Display',serif;font-size:14px;color:#fff;margin-bottom:6px}
+.disp-feature-desc{font-size:12px;color:rgba(255,255,255,.5);line-height:1.6}
+.dispenser-img{display:flex;align-items:center;justify-content:center;position:relative}
+.dispenser-img::before{content:'';position:absolute;inset:-40px;background:radial-gradient(ellipse,rgba(200,16,46,.12) 0%,transparent 70%);pointer-events:none}
+.dispenser-img img{max-width:100%;max-height:520px;object-fit:contain;filter:drop-shadow(0 30px 60px rgba(0,0,0,.6));position:relative;z-index:1;animation:float 7s ease-in-out infinite}
+
+/* PASTICCERIA */
+.pasticceria-section{background:var(--crema2)}
+.pasticceria-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.sfuso-card{background:#fff;border-radius:4px;padding:40px;box-shadow:0 8px 40px rgba(0,0,0,.06)}
+.sfuso-img-wrap{display:flex;justify-content:center;margin-bottom:20px}
+.sfuso-img-wrap img{max-height:200px;object-fit:contain;filter:drop-shadow(0 8px 24px rgba(0,0,0,.12))}
+.sfuso-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#1a1a1a;margin-bottom:4px}
+.sfuso-sub{font-family:'Dancing Script',cursive;font-size:17px;color:var(--rosso);margin-bottom:20px}
+.sfuso-desc{font-size:14px;font-weight:300;line-height:1.8;color:var(--grigio);margin-bottom:24px}
+.sfuso-uses{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.use-tag{background:var(--crema);border:1px solid rgba(200,16,46,.2);color:var(--rosso-scuro);padding:5px 12px;border-radius:2px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.benefit-list{list-style:none;display:flex;flex-direction:column;gap:16px;margin-bottom:36px}
+.benefit-list li{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:flex-start;padding-bottom:16px;border-bottom:1px solid rgba(200,16,46,.1)}
+.benefit-list li:last-child{border-bottom:none;padding-bottom:0}
+.benefit-icon{font-size:26px;line-height:1}
+.benefit-text strong{display:block;font-size:14px;font-weight:700;color:#1a1a1a;margin-bottom:3px}
+.benefit-text span{font-size:13px;font-weight:300;color:var(--grigio);line-height:1.6}
+
+/* PRIVATI */
+.privati-section{background:#fff}
+.privati-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.privati-card{background:var(--crema);border-radius:4px;padding:36px 28px;text-align:center;transition:transform .3s,box-shadow .3s;position:relative;overflow:hidden}
+.privati-card:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(0,0,0,.1)}
+.privati-card.featured-card{background:var(--rosso);color:#fff}
+.badge-best{position:absolute;top:14px;right:14px;background:#fff;color:var(--rosso);font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:2px}
+.privati-card img{max-height:150px;object-fit:contain;margin-bottom:18px;filter:drop-shadow(0 6px 16px rgba(0,0,0,.12))}
+.privati-card-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;margin-bottom:6px}
+.privati-card-sub{font-family:'Dancing Script',cursive;font-size:15px;color:var(--rosso);margin-bottom:12px}
+.featured-card .privati-card-sub{color:rgba(255,255,255,.85)}
+.privati-card-desc{font-size:13px;font-weight:300;line-height:1.7;color:var(--grigio);margin-bottom:22px}
+.featured-card .privati-card-desc{color:rgba(255,255,255,.75)}
+.bundle-img-wrap{position:relative;display:inline-block;margin-bottom:18px}
+.bundle-img-wrap img{max-height:150px;object-fit:contain;display:block;filter:drop-shadow(0 6px 16px rgba(0,0,0,.12))}
+.bundle-x5{position:absolute;top:-10px;right:-18px;background:var(--rosso);color:#fff;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:17px;font-weight:900;box-shadow:0 4px 14px rgba(200,16,46,.55);border:3px solid #fff}
+
+/* VALORI */
+.valori-section{background:#fff}
+.valori-header{text-align:center;max-width:640px;margin:0 auto 64px}
+.valori-header .section-label{justify-content:center}
+.valori-header .section-label::before{display:none}
+.valori-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--grigio-chiaro)}
+.valore-card{background:#fff;padding:40px 28px;text-align:center;transition:background .25s}
+.valore-card:hover{background:var(--crema)}
+.valore-icon{width:52px;height:52px;background:var(--crema);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:22px}
+.valore-title{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:#1a1a1a;margin-bottom:10px}
+.valore-desc{font-size:13px;font-weight:300;line-height:1.7;color:var(--grigio)}
+
+/* DIABETICI */
+.diabetici-banner{background:linear-gradient(135deg,var(--rosso-scuro) 0%,var(--rosso) 60%,#e84060 100%);padding:80px 32px;text-align:center;position:relative;overflow:hidden}
+.diabetici-banner::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat}
+.diabetici-inner{max-width:800px;margin:0 auto;position:relative;z-index:1}
+.diabetici-icon{font-size:56px;margin-bottom:20px;display:block;animation:heartbeat 1.4s ease-in-out infinite;transform-origin:center}
+.diabetici-title{font-family:'Playfair Display',serif;font-size:clamp(26px,3.5vw,40px);font-weight:900;color:#fff;margin-bottom:20px;line-height:1.2}
+.diabetici-title em{font-style:italic;color:rgba(255,255,255,.85)}
+.diabetici-text{font-size:16px;font-weight:300;line-height:1.9;color:rgba(255,255,255,.88);margin-bottom:32px;max-width:640px;margin-left:auto;margin-right:auto}
+.diabetici-stats{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;margin-bottom:40px}
+.diab-stat strong{display:block;font-family:'Playfair Display',serif;font-size:36px;font-weight:900;color:#fff;line-height:1}
+.diab-stat span{font-size:11px;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-top:4px;display:block}
+.diabetici-cta{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--rosso);text-decoration:none;padding:16px 40px;font-family:'Lato',sans-serif;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;border-radius:2px;transition:all .25s}
+.diabetici-cta:hover{background:var(--crema);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+
+/* CONTATTI */
+.contatti-section{background:var(--rosso)}
+.contatti-inner{max-width:1200px;margin:0 auto;padding:100px 32px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.contatti-content .section-label{color:rgba(255,255,255,.7)}
+.contatti-content .section-label::before{background:rgba(255,255,255,.7)}
+.contatti-content .section-title{color:#fff}
+.contatti-content .section-lead{color:rgba(255,255,255,.75);margin-bottom:40px}
+.contact-info{display:flex;flex-direction:column;gap:20px}
+.contact-item{display:flex;align-items:flex-start;gap:16px}
+.contact-icon{width:40px;height:40px;background:rgba(255,255,255,.15);border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px}
+.contact-label{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:4px}
+.contact-value{font-size:14px;color:#fff}
+.contact-form{background:rgba(255,255,255,.08);border-radius:4px;padding:40px;border:1px solid rgba(255,255,255,.15)}
+.form-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff;margin-bottom:24px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:7px}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:2px;padding:12px 16px;font-family:'Lato',sans-serif;font-size:14px;color:#fff;outline:none;transition:border .2s;-webkit-appearance:none}
+.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,.4)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:rgba(255,255,255,.6)}
+.form-group select option{background:var(--rosso-scuro);color:#fff}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group textarea{resize:vertical;min-height:100px}
+.btn-form{width:100%;background:#fff;color:var(--rosso);border:none;padding:14px;font-family:'Lato',sans-serif;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;border-radius:2px;cursor:pointer;transition:all .25s;margin-top:8px}
+.btn-form:hover{background:var(--crema);transform:translateY(-1px)}
+
+/* FORM FEEDBACK */
+.form-success{display:none;text-align:center;padding:40px 20px}
+.form-success .success-icon{font-size:48px;margin-bottom:16px;display:block}
+.form-success .success-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#fff;margin-bottom:12px}
+.form-success .success-text{font-size:14px;font-weight:300;line-height:1.8;color:rgba(255,255,255,.8);margin-bottom:24px}
+.form-success .btn-reset{background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3);padding:10px 24px;font-family:'Lato',sans-serif;font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;border-radius:2px;cursor:pointer;transition:all .25s}
+.form-success .btn-reset:hover{background:rgba(255,255,255,.25)}
+.form-error{display:none;background:rgba(255,255,255,.1);border:1px solid rgba(255,100,100,.4);border-radius:4px;padding:14px 18px;margin-bottom:16px;font-size:13px;color:rgba(255,200,200,.9);line-height:1.6}
+.btn-form:disabled{opacity:.6;cursor:not-allowed;transform:none}
+
+/* FOOTER */
+footer{background:#111;padding:60px 32px 32px}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:4px}
+.footer-brand-cursive{font-family:'Dancing Script',cursive;font-size:15px;color:rgba(200,16,46,.8);margin-bottom:14px}
+.footer-brand-desc{font-size:12px;color:rgba(255,255,255,.35);line-height:1.8;max-width:240px;font-weight:300}
+.footer-col h4{font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:16px}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:10px}
+.footer-col ul li a{text-decoration:none;font-size:13px;color:rgba(255,255,255,.5);transition:color .2s;font-weight:300}
+.footer-col ul li a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:11px;color:rgba(255,255,255,.3);font-weight:300}
+.footer-italprotein{font-size:11px;color:rgba(200,16,46,.6);font-weight:700;letter-spacing:.1em}
+
+/* ANIMATIONS */
+.fade-in{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+.fade-in-delay-1{transition-delay:.15s}
+.fade-in-delay-2{transition-delay:.3s}
+.fade-in-delay-3{transition-delay:.45s}
+
+/* DESSERTS SEPARATOR */
+.desserts-separator{position:relative;width:100%;overflow:hidden}
+.desserts-sep-img{position:relative;width:100%;height:480px}
+.desserts-sep-img img{width:100%;height:100%;object-fit:cover;object-position:center 60%;display:block;filter:brightness(.68)}
+.desserts-sep-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:flex-start;background:linear-gradient(105deg,rgba(139,10,30,.82) 0%,rgba(139,10,30,.5) 45%,rgba(0,0,0,.08) 100%)}
+.desserts-sep-inner{max-width:620px;padding:0 72px;color:#fff}
+.desserts-sep-label{font-size:10px;font-weight:700;letter-spacing:.35em;text-transform:uppercase;color:rgba(255,255,255,.72);margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.desserts-sep-label::before{content:'';display:inline-block;width:28px;height:1px;background:rgba(255,255,255,.55)}
+.desserts-sep-title{font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,52px);font-weight:900;line-height:1.1;color:#fff;margin-bottom:18px}
+.desserts-sep-title em{font-style:italic;color:rgba(255,215,215,.95)}
+.desserts-sep-sub{font-size:15px;font-weight:300;line-height:1.75;color:rgba(255,255,255,.80);max-width:480px}
+@media(max-width:768px){
+  .desserts-sep-img{height:320px}
+  .desserts-sep-inner{padding:0 32px}
+}
+@media(max-width:480px){
+  .desserts-sep-img{height:260px}
+  .desserts-sep-overlay{background:rgba(139,10,30,.72)}
+  .desserts-sep-inner{padding:0 24px}
+}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero{grid-template-columns:1fr}
+  .hero-left{padding:60px 40px;min-height:auto}
+  .hero-right{min-height:50vh}
+  .prodotto-grid,.caffe-grid,.cappuccino-grid,.pasticceria-grid,.dispenser-inner,.contatti-inner{grid-template-columns:1fr;gap:48px}
+  .cappuccino-callout{position:static;margin-top:16px;max-width:100%}
+  .cappuccino-visual{padding-bottom:0}
+  .valori-grid{grid-template-columns:1fr 1fr}
+  .privati-grid{grid-template-columns:1fr 1fr}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+  .dispenser-features{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .nav-hamburger{display:flex}
+  .section-inner{padding:72px 24px}
+  .dispenser-inner{padding:72px 24px}
+  .contatti-inner{padding:72px 24px}
+  .hero-left{padding:48px 24px}
+  .bustina-duo{grid-template-columns:1fr 1fr}
+  .form-row{grid-template-columns:1fr}
+  .valori-grid{grid-template-columns:1fr}
+  .privati-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .dispenser-features{grid-template-columns:1fr 1fr}
+  .diabetici-stats{gap:28px}
+}
+@media(max-width:480px){
+  .trust-inner{gap:16px}
+  .trust-item span{font-size:10px}
+  .hero-actions{flex-direction:column}
+  .hero-actions .btn-primary,.hero-actions .btn-secondary{text-align:center;justify-content:center}
+  .dispenser-features{grid-template-columns:1fr}
+  .privati-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <img src="images/logo.jpg" alt="Non è lo Zucchero">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#prodotto">The Product</a></li>
+      <li><a href="#bar">For Cafés</a></li>
+      <li><a href="#pasticceria">Pastry Shops</a></li>
+      <li><a href="#privati">For Home</a></li>
+      <li><a href="#valori">Why Choose Us</a></li>
+      <li><a href="#contatti" class="nav-cta">Order Now</a></li>
+      <li>
+        <div class="lang-switch">
+          <a href="index.html">IT</a>
+          <a href="en-index.html" class="active">EN</a>
+        </div>
+      </li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<nav class="nav-mobile" id="navMobile">
+  <div class="lang-switch-mobile">
+    <a href="index.html">Italiano</a>
+    <a href="en-index.html" class="active">English</a>
+  </div>
+  <a href="#prodotto" onclick="closeMenu()">The Product</a>
+  <a href="#bar" onclick="closeMenu()">For Cafés</a>
+  <a href="#pasticceria" onclick="closeMenu()">Pastry Shops</a>
+  <a href="#privati" onclick="closeMenu()">For Home</a>
+  <a href="#valori" onclick="closeMenu()">Why Choose Us</a>
+  <a href="#contatti" onclick="closeMenu()">Order Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-left fade-in">
+    <div class="hero-eyebrow">A world-first for the counter</div>
+    <h1 class="hero-title"><span class="cursive">It's Not</span><br>Sugar.</h1>
+    <div class="hero-subtitle">Your sweet, natural ally.</div>
+    <p class="hero-desc">The world's first <strong>100% protein-based</strong> sugar alternative, born from Italprotein Srl's research. Zero sugars, zero carbs, zero artificial colours. For cafés, pastry shops, and every moment of authentic sweetness — even at home.</p>
+    <div class="hero-actions">
+      <a href="#contatti" class="btn-primary">Request a sample</a>
+      <a href="#prodotto" class="btn-secondary">Discover the product</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img-wrap">
+    <img src="images/dispenser_rosso_final-removebg-preview.png" alt="Non è lo Zucchero dispenser">    
+    </div>
+    <div class="hero-badge"><span>100%</span><span>Protein</span></div>
+    <div class="hero-scroll">Explore</div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span>Patented in Italy</span>
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span>GI = 0 · Zero Sugars</span>
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      <span>Vegan · Gluten Free</span>
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+      <span>Dispenser included</span>
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      <span>48h Delivery · Free Returns</span>
+    </div>
+  </div>
+</div>
+
+<!-- PRODOTTO -->
+<section class="prodotto" id="prodotto">
+  <div class="section-inner">
+    <div class="prodotto-grid">
+      <div class="fade-in">
+        <div class="bustina-duo">
+          <div class="bustina-card">
+          <img src="images/fronte_bustina.jpg" alt="Sachet Front">
+          <div class="bustina-label">Sachet front</div>
+          </div>
+          <div class="bustina-card">
+          <img src="images/retro_bustina.jpg" alt="Sachet Back">
+          <div class="bustina-label">Sachet back</div>
+          </div>
+        </div>
+        <div class="prodotto-img-card" style="background:var(--crema2);margin-top:0">
+        <img src="images/dispenser_rosso_final-removebg-preview.png" alt="Counter dispenser" style="max-height:220px">       
+        </div>
+      </div>
+      <div class="fade-in fade-in-delay-1">
+        <div class="section-label">The product</div>
+        <h2 class="section-title">One sachet,<br>a world of <em>difference</em>.</h2>
+        <div class="divider-ornament"><svg width="20" height="14" viewBox="0 0 20 14" fill="var(--rosso)" opacity=".5"><path d="M10 0 L12 5 L17 5 L13 8 L15 13 L10 10 L5 13 L7 8 L3 5 L8 5 Z"/></svg></div>
+        <p class="section-lead" style="margin-bottom:28px">Each <em style="color:var(--rosso-scuro)">Non è lo Zucchero®</em> sachet contains 4g of Proamina®: pure amino acids from patented bacterial fermentation. Elegant on the counter, revolutionary in the cup.</p>
+        <ul class="features-list">
+          <li>4g of pure protein per sachet — zero carbs, zero fat</li>
+          <li>Heat-stable up to 214°C: perfect in coffee, cappuccino, tea and baking</li>
+          <li>Instant water-soluble: dissolves in 2 seconds with no residue</li>
+          <li>Zero bitter aftertaste — clean sweet flavour, like sugar but healthy</li>
+          <li>EU Reg. 1334/2008 compliant · GRAS Eligible USA · Vegan · Non-GMO</li>
+          <li>Co-branded <em style="color:var(--rosso-scuro)">Italprotein Srl</em> packaging — elevates your counter</li>
+        </ul>
+        <a href="#contatti" class="btn-primary">Request price list</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAFFÈ -->
+<section class="caffe-section" id="bar">
+  <div class="section-inner">
+    <div class="caffe-grid">
+      <div class="caffe-img fade-in">
+       <img src="images/espresso_cuore.jpg" alt="Espresso with Non è lo Zucchero">
+        <div class="img-caption">
+          <strong>The wellness espresso.</strong>
+          <span>Same sweetness, zero glycaemic impact</span>
+        </div>
+      </div>
+      <div class="fade-in fade-in-delay-1">
+        <div class="section-label">For Cafés</div>
+        <h2 class="section-title">The coffee your<br>customers will <em>love</em>.</h2>
+        <div class="divider-ornament"><span style="color:var(--rosso);font-size:18px;opacity:.5">✦ ✦ ✦</span></div>
+        <p class="section-lead" style="margin-bottom:28px">Every day, millions of people look for a healthier option at the café. With <strong>"Non è lo Zucchero®"</strong> you offer the answer: a protein-based sugar alternative that doesn't compromise taste or foam, suitable for diabetics, athletes, coeliacs and anyone making conscious choices.</p>
+        <ul class="features-list" style="margin-bottom:32px">
+          <li>Dissolves in espresso, americano, barley coffee and tea with no residue</li>
+          <li>No glycaemic spike — ideal for <strong>537 million diabetics worldwide</strong></li>
+          <li>Sugar Tax Free — no surcharge on sweetened beverages</li>
+          <li>Branded counter dispenser included with your first order</li>
+          <li>Complete POP kit: A4 poster, table topper, window sticker</li>
+        </ul>
+        <div style="display:flex;gap:16px;flex-wrap:wrap">
+          <a href="#contatti" class="btn-primary">Order for your café</a>
+          <a href="#dispenser" class="btn-secondary">See the dispenser</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPPUCCINO -->
+<section class="cappuccino-section">
+  <div class="section-inner">
+    <div class="cappuccino-grid">
+      <div class="fade-in fade-in-delay-1">
+        <div class="section-label">The secret of the foam</div>
+        <h2 class="section-title">The magic of the<br><em>perfect cappuccino</em>.</h2>
+        <div class="divider-ornament"><span style="color:var(--rosso);font-size:16px;opacity:.5">— ✦ —</span></div>
+        <p class="section-lead" style="margin-bottom:24px">Proamina® isn't just a sweetening ingredient: it's a revolution in the cup. Thanks to its protein nature, it interacts with milk proteins to enhance and stabilise micro-foam.</p>
+        <div class="schiuma-note">
+          <div class="note-label">The science of foam</div>
+          <p>Proamina®'s amino acids bind to <em>milk proteins during steaming</em>, forming a protein network that makes the foam <em>denser, silkier and longer-lasting</em>. The result is an extraordinary cappuccino — richer, more aromatic, more persistent — without a single gram of sugar.</p>
+        </div>
+        <ul class="features-list" style="margin-top:24px;margin-bottom:36px">
+          <li>Denser and more stable foam compared to traditional sucrose</li>
+          <li>Uniform micro-bubbles that enhance the barista's latte art</li>
+          <li>Compatible with dairy, oat, soy and almond milk</li>
+          <li>No aftertaste — clean sweetness that respects the coffee's aroma</li>
+        </ul>
+        <a href="#contatti" class="btn-primary">Request a sample</a>
+      </div>
+      <div class="cappuccino-visual fade-in">
+        <div class="cappuccino-img">
+          <img src="images/4cappuccini.jpg" alt="Cappuccino with latte art and Proamina"> 
+        </div>
+        <div class="cappuccino-callout">
+          <div class="callout-title">The foam that amazes</div>
+          <div class="callout-body">Proamina® interacts with milk proteins, creating a denser, silkier and longer-lasting micro-foam.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DISPENSER -->
+<section class="dispenser-section" id="dispenser">
+  <div class="dispenser-inner">
+    <div class="dispenser-content fade-in">
+      <div class="section-label">Counter dispenser</div>
+      <h2 class="section-title">A counter that<br><em>tells a story</em>.</h2>
+      <p class="section-lead">The "Non è lo Zucchero®" dispenser is designed to look great on your café counter. Elegant design, automatic sachet dispensing, unmistakable red colour. Included with your first order — free of charge.</p>
+      <div class="dispenser-features">
+        <div class="disp-feature">
+          <div class="disp-feature-icon">📦</div>
+          <div class="disp-feature-title">250 sachets included</div>
+          <div class="disp-feature-desc">Each box contains 250 × 4g sachets, enough for approximately 250 coffees.</div>
+        </div>
+        <div class="disp-feature">
+          <div class="disp-feature-icon">🎨</div>
+          <div class="disp-feature-title">Premium design</div>
+          <div class="disp-feature-desc">Unmistakable red, "Non è lo Zucchero®" branding on every surface.</div>
+        </div>
+        <div class="disp-feature">
+          <div class="disp-feature-icon">🔄</div>
+          <div class="disp-feature-title">Easy refill</div>
+          <div class="disp-feature-desc">Simply reorder sachets: the same dispenser refills in 30 seconds.</div>
+        </div>
+        <div class="disp-feature">
+          <div class="disp-feature-icon">🚀</div>
+          <div class="disp-feature-title">48h delivery</div>
+          <div class="disp-feature-desc">Express shipping across Italy. Free returns if you're not satisfied.</div>
+        </div>
+      </div>
+      <a href="#contatti" class="btn-primary" style="display:inline-flex">Request the free kit</a>
+    </div>
+    <div class="dispenser-img fade-in fade-in-delay-1">
+          <img src="images/dispenser_rosso_final-removebg-preview.png" alt="Red dispenser Non è lo Zucchero">
+    </div>
+  </div>
+</section>
+
+<!-- PASTICCERIA -->
+<section class="pasticceria-section" id="pasticceria">
+  <div class="section-inner">
+    <div class="pasticceria-grid">
+      <div class="fade-in">
+        <div class="sfuso-card">
+          <div class="sfuso-img-wrap">
+          <img src="images/Sacco_pasticceria.png" alt="Proamina 15kg bag for pastry shops">
+          </div>
+          <div class="sfuso-title">Proamina® Bulk</div>
+          <div class="sfuso-sub">15 kg bags for pastry shops</div>
+          <p class="sfuso-desc">Available in 15 kg bags for pastry labs, gelato shops and bakeries. Heat-stable to 214°C, Proamina® replaces sucrose in all preparations without altering texture, colour or leavening. A choice that turns your desserts into inclusive experiences.</p>
+          <div class="sfuso-uses">
+            <span class="use-tag">Cakes & Tarts</span>
+            <span class="use-tag">Cookies</span>
+            <span class="use-tag">Gelato</span>
+            <span class="use-tag">Mousse</span>
+            <span class="use-tag">Panna Cotta</span>
+            <span class="use-tag">Muffins</span>
+            <span class="use-tag">Tiramisù</span>
+            <span class="use-tag">Macarons</span>
+          </div>
+          <a href="#contatti" class="btn-primary">Request technical sheet</a>
+        </div>
+      </div>
+      <div class="pasticceria-info fade-in fade-in-delay-1">
+        <div class="section-label">For pastry shops & labs</div>
+        <h2 class="section-title">Desserts for <em>everyone</em>,<br>no compromises.</h2>
+        <div class="divider-ornament"><span style="color:var(--rosso);font-size:16px;opacity:.5">✦ ✦</span></div>
+        <p class="section-lead" style="margin-bottom:36px">The sugar-conscious consumer market is booming. Diabetics, athletes, people on low-carb diets and protein trend followers actively seek shops offering healthy, delicious alternatives. Proamina® lets you serve <strong>everyone</strong> without creating separate product lines.</p>
+        <ul class="benefit-list">
+          <li>
+            <div class="benefit-icon">❤️</div>
+            <div class="benefit-text">
+              <strong>Inclusivity for diabetics & insulin-resistant consumers</strong>
+              <span>Zero glycaemic index. Your desserts become accessible to the 537 million diabetics worldwide and those monitoring blood sugar.</span>
+            </div>
+          </li>
+          <li>
+            <div class="benefit-icon">💪</div>
+            <div class="benefit-text">
+              <strong>Ride the protein trend</strong>
+              <span>The high-protein food market grows +18% annually. Every dessert becomes functional: add "protein" to your menu.</span>
+            </div>
+          </li>
+          <li>
+            <div class="benefit-icon">🌿</div>
+            <div class="benefit-text">
+              <strong>100% Natural, EU-compliant</strong>
+              <span>From bacterial fermentation, Vegan, Gluten Free, Non-GMO. No artificial additives. Conscious consumers trust your shop.</span>
+            </div>
+          </li>
+          <li>
+            <div class="benefit-icon">📈</div>
+            <div class="benefit-text">
+              <strong>Sugar Tax: stay ahead of the competition</strong>
+              <span>With Sugar Tax in effect since July 2025, offering sugar-free desserts is a real and immediate competitive advantage.</span>
+            </div>
+          </li>
+        </ul>
+        <a href="#contatti" class="btn-secondary">Contact a sales rep</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESSERTS SEPARATOR -->
+<div class="desserts-separator">
+  <div class="desserts-sep-img">
+          <img src="images/desserts.jpg" alt="Sugar-free desserts with Proamina">
+    <div class="desserts-sep-overlay">
+      <div class="desserts-sep-inner">
+        <div class="desserts-sep-label">For pastry shops &amp; for home</div>
+        <div class="desserts-sep-title">All your favourite desserts,<br><em>now sugar-free</em>.</div>
+        <div class="desserts-sep-sub">With Proamina® every recipe becomes inclusive — same authentic taste, zero glycaemic impact, 100% natural protein.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRIVATI -->
+<section class="privati-section" id="privati">
+  <div class="section-inner">
+    <div style="text-align:center;max-width:640px;margin:0 auto 64px" class="fade-in">
+      <div class="section-label" style="justify-content:center">
+        <span style="display:inline-block;width:28px;height:1px;background:var(--rosso);margin-right:12px"></span>
+        For home use
+      </div>
+      <h2 class="section-title" style="text-align:center">Healthy sweetness<br><em>starts at home</em>.</h2>
+      <p class="section-lead" style="text-align:center;margin:0 auto">You don't have to wait for the café to enjoy the sweetness of Proamina®. Bring it to your kitchen: in your morning coffee, yoghurt, weekend cake. Zero guilt, maximum pleasure.</p>
+    </div>
+    <div class="privati-grid">
+      <div class="privati-card fade-in">
+          <img src="images/fronte_bustina.jpg" alt="Single-serve sachets Non è lo Zucchero">
+        <div class="privati-card-title">Single-Serve Sachets</div>
+        <div class="privati-card-sub">Café convenience, at home</div>
+        <div class="privati-card-desc">Box of 50 × 4g sachets. Ideal for daily coffee, tea, herbal infusions and breakfasts on the go. Toss them in your bag, take them to the office, gift them to friends.</div>
+        <a href="#contatti" class="btn-primary" style="width:100%;justify-content:center">Buy now</a>
+      </div>
+      <div class="privati-card featured-card fade-in fade-in-delay-1">
+        <div class="badge-best">Best seller</div>
+          <img src="images/barattolo.png" alt="Proamina 1kg jar" style="filter:drop-shadow(0 8px 20px rgba(0,0,0,.25))">
+        <div class="privati-card-title" style="color:#fff">1 kg Jar</div>
+        <div class="privati-card-sub">For your creative kitchen</div>
+        <div class="privati-card-desc">Loose Proamina® in a 1 kg jar. Perfect for cakes, cookies, cheesecake, protein smoothies and much more. Use like sugar: same volume, zero blood sugar impact.</div>
+        <a href="#contatti" class="btn-primary" style="width:100%;justify-content:center;background:#fff;color:var(--rosso);border-color:#fff">Buy now</a>
+      </div>
+      <div class="privati-card fade-in fade-in-delay-2">
+        <div class="badge-best" style="background:var(--rosso);color:#fff">Best value</div>
+        <div class="bundle-img-wrap">
+          <img src="images/barattolo.png" alt="Bundle 5 jars Proamina 1kg">
+          <div class="bundle-x5">×5</div>
+        </div>
+        <div class="privati-card-title">5 kg Bundle</div>
+        <div class="privati-card-sub">The deal for true enthusiasts</div>
+        <div class="privati-card-desc">5 × 1 kg jars at a special price. Ideal for families, athletes and anyone who has already discovered the benefits of Proamina® and never wants to go back. Free shipping included.</div>
+        <a href="#contatti" class="btn-primary" style="width:100%;justify-content:center">Buy the bundle</a>
+      </div>
+    </div>
+    <div style="margin-top:48px;background:var(--crema2);border-radius:4px;padding:40px;text-align:center" class="fade-in">
+      <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#1a1a1a;margin-bottom:12px">Recipes & Inspiration</div>
+      <p style="font-size:14px;font-weight:300;line-height:1.8;color:var(--grigio);max-width:540px;margin:0 auto 24px">Proamina® behaves exactly like sugar in recipes: same volume, same consistency. Substitute 1:1 in any recipe you love.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <span style="background:#fff;border:1px solid rgba(200,16,46,.2);color:var(--rosso-scuro);padding:8px 16px;border-radius:2px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase">Sugar-free cakes</span>
+        <span style="background:#fff;border:1px solid rgba(200,16,46,.2);color:var(--rosso-scuro);padding:8px 16px;border-radius:2px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase">Protein smoothies</span>
+        <span style="background:#fff;border:1px solid rgba(200,16,46,.2);color:var(--rosso-scuro);padding:8px 16px;border-radius:2px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase">Fitness cookies</span>
+        <span style="background:#fff;border:1px solid rgba(200,16,46,.2);color:var(--rosso-scuro);padding:8px 16px;border-radius:2px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase">Protein cheesecake</span>
+        <span style="background:#fff;border:1px solid rgba(200,16,46,.2);color:var(--rosso-scuro);padding:8px 16px;border-radius:2px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase">Low-carb gelato</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALORI -->
+<section class="valori-section" id="valori">
+  <div class="section-inner">
+    <div class="valori-header fade-in">
+      <div class="section-label">Why choose us</div>
+      <h2 class="section-title">Not just sweet.<br><em>Revolutionary</em>.</h2>
+      <p class="section-lead" style="text-align:center;margin:0 auto">The sugar alternatives market is worth $7.8 billion and growing at +7.4% per year. You're in the right place at the right time.</p>
+    </div>
+    <div class="valori-grid" style="margin-top:48px">
+      <div class="valore-card fade-in">
+        <div class="valore-icon">🔬</div>
+        <div class="valore-title">Patented</div>
+        <p class="valore-desc">Technology patented in Italy with international PCT extension. The only 100% protein-based sweetening ingredient in the world.</p>
+      </div>
+      <div class="valore-card fade-in fade-in-delay-1">
+        <div class="valore-icon">❤️</div>
+        <div class="valore-title">GI = 0</div>
+        <p class="valore-desc">Zero glycaemic index. Ideal for diabetics, athletes and those on low-carb or ketogenic diets.</p>
+      </div>
+      <div class="valore-card fade-in fade-in-delay-2">
+        <div class="valore-icon">🌿</div>
+        <div class="valore-title">100% Natural</div>
+        <p class="valore-desc">From bacterial fermentation. Vegan, Gluten Free, Non-GMO, zero allergens. EU Reg. 1334/2008 compliant.</p>
+      </div>
+      <div class="valore-card fade-in fade-in-delay-3">
+        <div class="valore-icon">📈</div>
+        <div class="valore-title">Growing market</div>
+        <p class="valore-desc">+18% demand for sugar substitutes since 2020. Sugar Tax in effect since July 2025. You're already ahead of the competition.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIABETICI BANNER -->
+<section class="diabetici-banner" id="diabetici">
+  <div class="diabetici-inner fade-in">
+    <span class="diabetici-icon">💙</span>
+    <h2 class="diabetici-title">A real commitment<br>for those <em>living with diabetes</em>.</h2>
+    <p class="diabetici-text">We know how hard it is to give up taste when your body asks you to make different choices. Non è lo Zucchero® was born for exactly this: because sweetness is everyone's right, not a privilege. With zero glycaemic index and zero carbs, you can finally enjoy your coffee, favourite desserts and family recipes <strong style="color:#fff">without worrying about blood sugar</strong>. Because a sweeter life should never mean choosing between pleasure and health.</p>
+    <div class="diabetici-stats">
+      <div class="diab-stat"><strong>537M</strong><span>diabetics worldwide</span></div>
+      <div class="diab-stat"><strong>GI = 0</strong><span>glycaemic impact</span></div>
+      <div class="diab-stat"><strong>100%</strong><span>natural protein</span></div>
+      <div class="diab-stat"><strong>214°C</strong><span>baking stable</span></div>
+    </div>
+    <a href="#contatti" class="diabetici-cta">Discover how to order →</a>
+  </div>
+</section>
+
+<!-- CONTATTI -->
+<section class="contatti-section" id="contatti">
+  <div class="contatti-inner">
+    <div class="contatti-content fade-in">
+      <div class="section-label">Contact & Orders</div>
+      <h2 class="section-title" style="color:#fff">Bring "Non è lo<br>Zucchero®" to your venue.</h2>
+      <p class="section-lead">Fill in the form to receive a <strong style="color:#fff">free sample</strong>, the professional price list and the dispenser kit. One of our agents will contact you within 24 hours.</p>
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div><div class="contact-label">Email</div><div class="contact-value">ad@italprotein.com</div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🏢</div>
+          <div><div class="contact-label">Company</div><div class="contact-value">Italprotein Srl · Bologna, Italy</div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div><div class="contact-label">Phone</div><div class="contact-value">+39 339 801 7462</div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🌐</div>
+          <div><div class="contact-label">Website</div><div class="contact-value"><a href="https://www.italprotein.com" target="_blank" style="color:#fff">www.italprotein.com</a></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form fade-in fade-in-delay-1">
+      <div class="form-title">Request information</div>
+      
+      <div class="form-error" id="formError"></div>
+      
+      <div id="formFields">
+        <input type="hidden" id="accessKey" value="fe6dca8a-eae8-487d-80da-fcf4ff215d2f">
+        
+        <div class="form-row">
+          <div class="form-group"><label>First name *</label><input type="text" id="nome" placeholder="John" required></div>
+          <div class="form-group"><label>Last name *</label><input type="text" id="cognome" placeholder="Smith" required></div>
+        </div>
+        <div class="form-group"><label>Email *</label><input type="email" id="email" placeholder="john@yourcafe.com" required></div>
+        <div class="form-group"><label>Phone</label><input type="tel" id="telefono" placeholder="+44 20 7946 0958"></div>
+        <div class="form-group">
+          <label>Customer type</label>
+          <select id="tipoCliente">
+            <option value="">Select...</option>
+            <option>Café / Coffee Shop</option>
+            <option>Pastry Shop / Bakery</option>
+            <option>Gelato Shop</option>
+            <option>Restaurant / Hotel</option>
+            <option>Private / Home Use</option>
+            <option>Distributor / Wholesaler</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Message</label><textarea id="messaggio" placeholder="I'd like to receive a sample and the price list..."></textarea></div>
+        <button class="btn-form" id="submitBtn" onclick="handleSubmit(event)">Send request &rarr;</button>
+      </div>
+      
+      <div class="form-success" id="formSuccess">
+        <span class="success-icon">✓</span>
+        <div class="success-title">Request sent successfully!</div>
+        <div class="success-text">Thank you for your interest. One of our agents will contact you within 24 business hours at the email address provided.</div>
+        <button class="btn-reset" onclick="resetForm()">Send another request</button>
+      </div>
+      
+      <p style="font-size:10px;color:rgba(255,255,255,.4);margin-top:12px;line-height:1.6">We'll respond within 24 business hours. Your data is processed in accordance with the GDPR and is never shared with third parties.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">Non è lo Zucchero®</div>
+        <div class="footer-brand-cursive">Your sweet, natural ally</div>
+        <p class="footer-brand-desc">A brand by Italprotein Srl serving the professional café, pastry, hospitality and home consumer segments. Proamina® under exclusive licence from NH2 Tech Srl, Milan.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#prodotto">Single-serve sachets</a></li>
+          <li><a href="#privati">1 kg jar</a></li>
+          <li><a href="#pasticceria">Bulk 15 kg</a></li>
+          <li><a href="#privati">5 kg bundle</a></li>
+          <li><a href="#dispenser">Counter dispenser</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Segments</h4>
+        <ul>
+          <li><a href="#bar">Cafés & Coffee Shops</a></li>
+          <li><a href="#pasticceria">Pastry Shops</a></li>
+          <li><a href="#pasticceria">Gelato Shops</a></li>
+          <li><a href="#pasticceria">Bakeries</a></li>
+          <li><a href="#privati">Home Use</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="https://www.italprotein.com" target="_blank">Italprotein.com</a></li>
+          <li><a href="mailto:ad@italprotein.com">ad@italprotein.com</a></li>
+          <li><a href="#contatti">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Non è lo Zucchero® — All rights reserved · VAT IT04371971203 · Italprotein Srl</div>
+      <div class="footer-italprotein">A brand by ITALPROTEIN SRL · Bologna, Italy</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+});
+
+const btn = document.getElementById('hamburger');
+const mob = document.getElementById('navMobile');
+btn.addEventListener('click', () => {
+  btn.classList.toggle('open');
+  mob.classList.toggle('open');
+});
+
+function closeMenu() {
+  document.getElementById('hamburger').classList.remove('open');
+  document.getElementById('navMobile').classList.remove('open');
+}
+
+async function handleSubmit(e) {
+  e.preventDefault();
+  
+  const submitBtn = document.getElementById('submitBtn');
+  const errorDiv = document.getElementById('formError');
+  const successDiv = document.getElementById('formSuccess');
+  const formFields = document.getElementById('formFields');
+  
+  const nome = document.getElementById('nome').value.trim();
+  const cognome = document.getElementById('cognome').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const telefono = document.getElementById('telefono').value.trim();
+  const tipoCliente = document.getElementById('tipoCliente').value;
+  const messaggio = document.getElementById('messaggio').value.trim();
+  const accessKey = document.getElementById('accessKey').value;
+  
+  errorDiv.style.display = 'none';
+  
+  if (!nome || !cognome || !email) {
+    errorDiv.textContent = 'Please fill in the required fields: First Name, Last Name and Email.';
+    errorDiv.style.display = 'block';
+    return;
+  }
+  
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    errorDiv.textContent = 'Please enter a valid email address.';
+    errorDiv.style.display = 'block';
+    return;
+  }
+  
+  if (accessKey === 'LA_TUA_ACCESS_KEY_QUI') {
+    errorDiv.innerHTML = 'The form is not yet configured. The site owner needs to enter the <a href="https://web3forms.com" target="_blank" style="color:#fff;text-decoration:underline">Web3Forms</a> Access Key.';
+    errorDiv.style.display = 'block';
+    return;
+  }
+  
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+  
+  const formData = {
+    access_key: accessKey,
+    subject: 'New enquiry from Non è lo Zucchero® (EN) — ' + nome + ' ' + cognome,
+    from_name: 'Non è lo Zucchero® — Website (EN)',
+    first_name: nome,
+    last_name: cognome,
+    email: email,
+    phone: telefono || 'Not specified',
+    customer_type: tipoCliente || 'Not specified',
+    message: messaggio || 'No additional message',
+    replyto: email
+  };
+  
+  try {
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    });
+    
+    const result = await response.json();
+    
+    if (result.success) {
+      formFields.style.display = 'none';
+      successDiv.style.display = 'block';
+    } else {
+      throw new Error(result.message || 'Error during submission');
+    }
+  } catch (error) {
+    errorDiv.textContent = 'An error occurred during submission. Please try again later or contact us directly at ad@italprotein.com';
+    errorDiv.style.display = 'block';
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send request →';
+  }
+}
+
+function resetForm() {
+  const formFields = document.getElementById('formFields');
+  const successDiv = document.getElementById('formSuccess');
+  const submitBtn = document.getElementById('submitBtn');
+  
+  document.getElementById('nome').value = '';
+  document.getElementById('cognome').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('telefono').value = '';
+  document.getElementById('tipoCliente').value = '';
+  document.getElementById('messaggio').value = '';
+  
+  successDiv.style.display = 'none';
+  formFields.style.display = 'block';
+  submitBtn.disabled = false;
+  submitBtn.textContent = 'Send request →';
+}
+</script>
+</body>
+</html>
