@@ -43,13 +43,20 @@ body{font-family:'Lato',sans-serif;background:#fff;color:#1a1a1a;overflow-x:hidd
 .divider-ornament{display:flex;align-items:center;gap:16px;justify-content:center;margin:20px 0}
 .divider-ornament::before,.divider-ornament::after{content:'';flex:1;max-width:80px;height:1px;background:var(--rosso);opacity:.4}
 
+/* LANGUAGE SWITCHER */
+.lang-switch{display:flex;align-items:center;gap:4px;margin-left:16px}
+.lang-switch a{display:flex;align-items:center;justify-content:center;width:32px;height:22px;border-radius:3px;font-size:11px;font-weight:700;letter-spacing:.04em;text-decoration:none;text-transform:uppercase;transition:all .2s;border:1.5px solid transparent}
+.lang-switch a.active{background:var(--rosso);color:#fff;border-color:var(--rosso)}
+.lang-switch a:not(.active){color:var(--grigio);border-color:rgba(0,0,0,.15)}
+.lang-switch a:not(.active):hover{border-color:var(--rosso);color:var(--rosso)}
+
 /* NAVBAR */
 .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(200,16,46,.12);transition:box-shadow .3s}
 .navbar.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.08)}
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:76px}
 .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
 .nav-logo img{height:60px;width:auto;object-fit:contain}
-.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links{display:flex;gap:32px;list-style:none;align-items:center}
 .nav-links a{text-decoration:none;font-size:13px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--grigio);transition:color .2s}
 .nav-links a:hover{color:var(--rosso)}
 .nav-cta{background:var(--rosso);color:#fff!important;padding:10px 22px;border-radius:2px;letter-spacing:.1em;font-weight:700;transition:background .2s!important}
@@ -63,6 +70,9 @@ body{font-family:'Lato',sans-serif;background:#fff;color:#1a1a1a;overflow-x:hidd
 .nav-mobile.open{display:flex}
 .nav-mobile a{display:block;padding:14px 0;border-bottom:1px solid var(--grigio-chiaro);font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--grigio);text-decoration:none}
 .nav-mobile a:last-child{border-bottom:none;margin-top:16px;background:var(--rosso);color:#fff;text-align:center;padding:14px;border-radius:2px}
+.nav-mobile .lang-switch-mobile{display:flex;gap:8px;padding:14px 0;border-bottom:1px solid var(--grigio-chiaro)}
+.nav-mobile .lang-switch-mobile a{display:inline-flex;align-items:center;justify-content:center;padding:8px 16px;border:1.5px solid rgba(0,0,0,.15);border-radius:3px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.nav-mobile .lang-switch-mobile a.active{background:var(--rosso);color:#fff;border-color:var(--rosso)}
 
 /* HERO */
 .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;padding-top:76px}
@@ -355,6 +365,12 @@ footer{background:#111;padding:60px 32px 32px}
       <li><a href="#privati">Per Casa</a></li>
       <li><a href="#valori">Perché sceglierci</a></li>
       <li><a href="#contatti" class="nav-cta">Ordina ora</a></li>
+      <li>
+        <div class="lang-switch">
+          <a href="index.html" class="active">IT</a>
+          <a href="en-index.html">EN</a>
+        </div>
+      </li>
     </ul>
     <button class="nav-hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -362,6 +378,10 @@ footer{background:#111;padding:60px 32px 32px}
   </div>
 </nav>
 <nav class="nav-mobile" id="navMobile">
+  <div class="lang-switch-mobile">
+    <a href="index.html" class="active">Italiano</a>
+    <a href="en-index.html">English</a>
+  </div>
   <a href="#prodotto" onclick="closeMenu()">Il Prodotto</a>
   <a href="#bar" onclick="closeMenu()">Per il Bar</a>
   <a href="#pasticceria" onclick="closeMenu()">Pasticceria</a>
@@ -769,19 +789,9 @@ footer{background:#111;padding:60px 32px 32px}
     <div class="contact-form fade-in fade-in-delay-1">
       <div class="form-title">Richiedi informazioni</div>
       
-      <!-- ============================================================
-           FORM FUNZIONANTE CON WEB3FORMS (gratuito, fino a 250 email/mese)
-           
-           ISTRUZIONI:
-           1. Vai su https://web3forms.com
-           2. Inserisci ad@italprotein.com per ottenere la tua Access Key
-           3. Sostituisci "LA_TUA_ACCESS_KEY_QUI" qui sotto con la chiave ricevuta via email
-           ============================================================ -->
       <div class="form-error" id="formError"></div>
       
-      <!-- Il form invia direttamente a Web3Forms che inoltra l'email a ad@italprotein.com -->
       <div id="formFields">
-        <!-- Hidden fields per Web3Forms -->
         <input type="hidden" id="accessKey" value="fe6dca8a-eae8-487d-80da-fcf4ff215d2f">
         
         <div class="form-row">
@@ -807,7 +817,6 @@ footer{background:#111;padding:60px 32px 32px}
         <button class="btn-form" id="submitBtn" onclick="handleSubmit(event)">Invia richiesta &rarr;</button>
       </div>
       
-      <!-- Messaggio di successo (nascosto di default) -->
       <div class="form-success" id="formSuccess">
         <span class="success-icon">✓</span>
         <div class="success-title">Richiesta inviata con successo!</div>
@@ -890,10 +899,6 @@ function closeMenu() {
   document.getElementById('navMobile').classList.remove('open');
 }
 
-/* ============================================================
-   FORM HANDLER — Web3Forms API (gratuito)
-   Invia i dati del form come email a ad@italprotein.com
-   ============================================================ */
 async function handleSubmit(e) {
   e.preventDefault();
   
@@ -902,7 +907,6 @@ async function handleSubmit(e) {
   const successDiv = document.getElementById('formSuccess');
   const formFields = document.getElementById('formFields');
   
-  // Raccogli i valori
   const nome = document.getElementById('nome').value.trim();
   const cognome = document.getElementById('cognome').value.trim();
   const email = document.getElementById('email').value.trim();
@@ -911,7 +915,6 @@ async function handleSubmit(e) {
   const messaggio = document.getElementById('messaggio').value.trim();
   const accessKey = document.getElementById('accessKey').value;
   
-  // Validazione
   errorDiv.style.display = 'none';
   
   if (!nome || !cognome || !email) {
@@ -920,25 +923,21 @@ async function handleSubmit(e) {
     return;
   }
   
-  // Validazione email semplice
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     errorDiv.textContent = 'Per favore inserisci un indirizzo email valido.';
     errorDiv.style.display = 'block';
     return;
   }
   
-  // Controlla che la access key sia stata configurata
   if (accessKey === 'LA_TUA_ACCESS_KEY_QUI') {
     errorDiv.innerHTML = 'Il form non è ancora configurato. Il proprietario del sito deve inserire la Access Key di <a href="https://web3forms.com" target="_blank" style="color:#fff;text-decoration:underline">Web3Forms</a>.';
     errorDiv.style.display = 'block';
     return;
   }
   
-  // Disabilita il bottone durante l'invio
   submitBtn.disabled = true;
   submitBtn.textContent = 'Invio in corso...';
   
-  // Prepara i dati per Web3Forms
   const formData = {
     access_key: accessKey,
     subject: 'Nuova richiesta da Non è lo Zucchero® — ' + nome + ' ' + cognome,
@@ -949,7 +948,6 @@ async function handleSubmit(e) {
     telefono: telefono || 'Non specificato',
     tipo_cliente: tipoCliente || 'Non specificato',
     messaggio: messaggio || 'Nessun messaggio aggiuntivo',
-    // Consente di rispondere direttamente al mittente
     replyto: email
   };
   
@@ -966,7 +964,6 @@ async function handleSubmit(e) {
     const result = await response.json();
     
     if (result.success) {
-      // Successo: mostra il messaggio di conferma
       formFields.style.display = 'none';
       successDiv.style.display = 'block';
     } else {
@@ -985,7 +982,6 @@ function resetForm() {
   const successDiv = document.getElementById('formSuccess');
   const submitBtn = document.getElementById('submitBtn');
   
-  // Reset tutti i campi
   document.getElementById('nome').value = '';
   document.getElementById('cognome').value = '';
   document.getElementById('email').value = '';
@@ -993,7 +989,6 @@ function resetForm() {
   document.getElementById('tipoCliente').value = '';
   document.getElementById('messaggio').value = '';
   
-  // Ripristina il form
   successDiv.style.display = 'none';
   formFields.style.display = 'block';
   submitBtn.disabled = false;
